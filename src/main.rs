@@ -7,7 +7,6 @@ fn main() {
 
     let grid = vec![vec![0; width]; height];
 
-    let grid_to_init = &grid[..];
 
     for row in grid {
         for mut column in row {
@@ -15,5 +14,4 @@ fn main() {
         }
     }
 
-    println!("{:?}", grid_to_init);
 }
