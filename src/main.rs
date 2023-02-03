@@ -5,13 +5,13 @@ fn main() {
     let height = 10;
     let mut rng = rand::thread_rng();
 
-    let grid = vec![vec![0; width]; height];
+    let mut grid = vec![vec![0; width]; height];
 
-
-    for row in grid {
-        for mut column in row {
-            column = rng.gen_range((0..1))
+    for i in 0..width {
+        for j in 0..width {
+            grid[i][j] = rng.gen_range(0..2);
         }
     }
 
+    println!("{:?}", &grid)
 }
